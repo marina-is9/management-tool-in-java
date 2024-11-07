@@ -1,0 +1,71 @@
+{
+    "packages": [
+        {
+            "name": "fideloper/proxy",
+            "version": "4.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fideloper/TrustedProxy.git",
+                "reference": "4d5b0a428ced56d59b9caabfd19814b92d085fb3"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://api.github.com/repos/fideloper/TrustedProxy/tarball/4d5b0a428ced56d59b9caabfd19814b92d085fb3",
+                "reference": "4d5b0a428ced56d59b9caabfd19814b92d085fb3"
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fideloper\\Proxy\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Fideloper\\Proxy\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/packages/fideloper/proxy/downloads",
+            "license": "MIT",
+            "description": "Set trusted proxies for Laravel",
+            "keywords": [
+                "laravel",
+                "proxy",
+                "trusted"
+            ]
+        },
+        // More package entries...
+    ],
+    "packages-dev": [
+        {
+            "name": "barryvdh/laravel-debugbar",
+            "version": "3.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-debugbar.git",
+                "reference": "e9c022fdcd3c57ee2e340bc32c4aeb7d3c6213a0"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://api.github.com/repos/barryvdh/laravel-debugbar/tarball/e9c022fdcd3c57ee2e340bc32c4aeb7d3c6213a0",
+                "reference": "e9c022fdcd3c57ee2e340bc32c4aeb7d3c6213a0"
+            },
+            "require": {
+                "php": "^7.4|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Debugbar\\": "src/"
+                }
+            }
+        },
+        // More dev dependencies...
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
