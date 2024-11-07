@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- ChangeSet 1: Create the webauthn_keys table -->
+    <changeSet id="1" author="your_username">
+        <createTable tableName="webauthn_keys">
+            <column name="id" type="BIGINT">
+                <autoIncrement/>
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false" defaultValue="key"/>
+            </column>
+            <column name="credentialId" type="MEDIUMTEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="transports" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="attestationType" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trustPath" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        
