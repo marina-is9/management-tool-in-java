@@ -1,0 +1,62 @@
+{
+    "name": "your-project-name",
+    "description": "A description of your project",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "laravel/framework": "^10.0",
+        "laravel/sanctum": "^3.0",
+        "monolog/monolog": "^2.0",
+        "nesbot/carbon": "^2.0",
+        "symfony/css-selector": "^6.2",
+        "symfony/dom-crawler": "^6.2",
+        "symfony/http-foundation": "^6.2",
+        "symfony/http-kernel": "^6.2",
+        "symfony/mailer": "^6.2",
+        "symfony/process": "^6.2"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
+        "fakerphp/faker": "^1.9",
+        "facade/ignition": "^2.7",
+        "mockery/mockery": "^1.5",
+        "nunomaduro/collision": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "pm\\": "app/pm/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "pre-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-install-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    }
+}
